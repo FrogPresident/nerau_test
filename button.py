@@ -1,11 +1,13 @@
 import pygame
 
 from coordinate_drawable import CoordinateDrawable
+from utils import leaf
 
 
+@leaf
 class Button(CoordinateDrawable):
     def __init__(self, x, y, image, scale):
-        super(Button, self).__init__(x, y)
+        super().__init__(x, y)
         width = image.get_width()
         height = image.get_height()
         self.image = pygame.transform.scale(image, (int(width * scale), int(height * scale)))

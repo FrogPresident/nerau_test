@@ -3,6 +3,7 @@ import pygame
 import drawable
 from scene import Scene
 from target import Target
+from button import Button
 
 screen_height = 800
 screen_width = 600
@@ -21,8 +22,9 @@ def main():
         # Code in here
         main_view = Scene()
         main_view.draw(screen)
-        target = Target(22, 33, target_object, 1, 3)
-        target.draw(screen)
+        start_button = Button(10, 10, target_object, 1)
+        start_button.draw(screen)
+        start_button.add(main_view)
         ###
         pygame.display.flip()
 
